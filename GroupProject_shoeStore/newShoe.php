@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    <div class="w3-container w3-blue-grey">
-        <header class="w3-display-container w3-center">
-            <h1>(Insert Store Name)</h1>
+    <div class="w3-container w3-gray w3-center w3-card-4 w3-margin w3-round-xlarge w3-padding-64 w3-display-container">
+        <header class="w3-container w3-center w3-padding-32 w3-blue">
+            <h1 class="w3-xxxlarge w3-text-white w3-bold">Velocity Footwear</h1>
             <h2>New Shoe</h2>
-        </header>
-        <?php include "mainMenu.php"; ?>
+        </header><br>
+        <?php include "mainMenu.php"; ?><br>
 
-        <form class="w3-container w3-sand" method="POST">
+        <form class="w3-container" method="POST">
             <fieldset>
                 <label>Brand</label>
                 <input type="text" class="w3-input w3-border" name="brand">
@@ -35,9 +35,9 @@
                 <label>Price</label>
                 <input type="number" step="0.01" class="w3-input w3-border" name="price">
             </fieldset>
-            <br><input type="submit" name="submit" value="Add new Shoe" class="w3-btn w3-blue-grey" />
+            <br><input type="submit" name="submit" value="Add new Shoe" class="w3-btn w3-black" />
         </form>
-        <div class="w3-container w3-sand">
+        <div class="w3-container w3-blue">
             <?php
             if (isset($_POST["submit"])) {
                 $fieldsToCheck = ['brand', 'modelName', 'shoeSize', 'color', 'price'];
@@ -77,6 +77,7 @@
             ?>
         </div>
     </div>
+    <?php include "footer.php"; ?>
 </body>
 
 </html>
